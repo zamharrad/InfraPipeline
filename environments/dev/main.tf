@@ -12,5 +12,5 @@ module "ec2" {
   ami_id        = "ami-05f071c65e32875a8"  # Example AMI ID, replace with a valid one for your region
   instance_type = "t2.micro"
   subnet_id     = module.vpc.subnet_id
-  ec2_count     = 1
+  ec2_count     = 2
 }
