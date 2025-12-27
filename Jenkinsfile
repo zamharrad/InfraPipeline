@@ -29,13 +29,11 @@ pipeline {
             }
         }
         stage('Approval') {
-           /*
-            when {
+           when {
                 expression { return env.BRANCH_NAME == 'production' }
             } 
-           */
             steps {
-                input message: "Approve deployment to ${env.BRANCH_NAME}?" , ok: 'Deploy'
+                input message: "Approve deployment to production?" , ok: 'Deploy'
             }
 
         }
